@@ -25,7 +25,7 @@ h3 {
 }
 
 hr {
-	border-color: #FFFFFF;
+	border-color: #ede5d9;
 	border-top-color: #5C960D;
 }
 
@@ -39,7 +39,7 @@ a:hover	{ color: #401A07; }
 
 /* Links on gradient backgrounds */
 .forumbg .header a, .forabg .header a, th a {
-	color: #FFFFFF;
+	color: #ede5d9;
 }
 
 .forumbg .header a:hover, .forabg .header a:hover, th a:hover {
@@ -48,7 +48,7 @@ a:hover	{ color: #401A07; }
 
 /* Notification mark read link */
 .dropdown-extended a.mark_read {
-	background-color: #FFFFFF;
+	background-color: #ede5d9;
 }
 
 /* Post body links */
@@ -92,6 +92,8 @@ a:hover	{ color: #401A07; }
 .headerbar {
 	background-color: #CFBD9E;
 	background-image: url("./images/bg_header.jpg");
+    background-repeat: repeat-x;
+	position:relative;
 	color: #401A07;
 	font-weight: bold;
 }
@@ -171,7 +173,7 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
 ----------------------------------------*/
 
 ul.navlinks {
-	border-top-color: #FFFFFF;
+	border-top-color: #ede5d9;
 }
 
 /* Table styles
@@ -200,7 +202,7 @@ table.table1 tbody td {
 table.table1 tbody th {
 	border-bottom-color: #401A07;
 	color: #333333;
-	background-color: #FFFFFF;
+	background-color: #ede5d9;
 }
 
 table.info tbody th {
@@ -256,7 +258,7 @@ dl.details dd {
 }
 
 .alert_close .icon:before {
-	background-color: #FFFFFF;
+	background-color: #ede5d9;
 }
 
 /* Jumpbox */
@@ -267,13 +269,13 @@ dl.details dd {
 .jumpbox-cat-link {
 	background-color: #5F9900;
 	border-top-color: #5F9900;
-	color: #FFFFFF;
+	color: #ede5d9;
 }
 
 .jumpbox-cat-link:hover {
 	background-color: #3A5E02;
 	border-top-color: #3A5E02;
-	color: #FFFFFF;
+	color: #ede5d9;
 }
 
 .jumpbox-forum-link {
@@ -354,7 +356,7 @@ ul.topiclist dd {
 }
 
 li.row {
-	border-top-color:  #FFFFFF;
+	border-top-color:  #ede5d9;
 	border-bottom-color: #D6D0AE;
 }
 
@@ -426,12 +428,7 @@ dl.faq dt {
 /* Quote block */
 blockquote {
 	background-color: #EBEADD;
-	background-image: url("./images/quote.gif");
 	border-color:#DBDBCE;
-}
-
-.rtl blockquote {
-	background-image: url("./images/quote_rtl.gif");
 }
 
 blockquote blockquote {
@@ -446,7 +443,7 @@ blockquote blockquote blockquote {
 
 /* Code block */
 .codebox {
-	background-color: #FFFFFF;
+	background-color: #ede5d9;
 	border-color: #C9D2D8;
 }
 
@@ -457,13 +454,6 @@ blockquote blockquote blockquote {
 .codebox code {
 	color: #2E8B57;
 }
-
-.syntaxbg		{ color: #FFFFFF; }
-.syntaxcomment	{ color: #FF8000; }
-.syntaxdefault	{ color: #0000BB; }
-.syntaxhtml		{ color: #401A07; }
-.syntaxkeyword	{ color: #007700; }
-.syntaxstring	{ color: #DD0000; }
 
 /* Attachments
 ----------------------------------------*/
@@ -792,7 +782,7 @@ Colours and backgrounds for cp.css
 
 .panel-container .panel li.row {
 	border-bottom-color: #B5C1CB;
-	border-top-color: #F9F9F9;
+	border-top-color: #ede5d9;
 }
 
 ul.cplist {
@@ -857,7 +847,7 @@ ul.cplist {
 
 .minitabs .activetab > a,
 .minitabs .activetab > a:hover {
-	background-color: #F9F9F9;
+	background-color: #ede5d9;
 	color: #333333;
 }
 
@@ -898,7 +888,7 @@ ul.cplist {
 }
 
 .navigation .active-subsection a {
-	background: #F9F9F9;
+	background: #ede5d9;
 	color: #D31141;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -921,7 +911,7 @@ ul.cplist {
 }
 
 .panel-container .panel {
-	background-color: #F9F9F9;
+	background-color: #ede5d9;
 }
 
 .cp-main .pm {
@@ -930,7 +920,7 @@ ul.cplist {
 
 /* Friends list */
 .cp-mini {
-	background-color: #EEF5F9;
+	background-color: #ede5d9;
 }
 
 dl.mini dt {
@@ -1139,7 +1129,7 @@ input.disabled {
 }
 
 .dropdown-extended ul li:hover {
-	background-color: #ecfece;
+	background-color: #c4ac86;
 	color: #401A07;
 }
 
@@ -1165,15 +1155,20 @@ input.disabled {
 }
 
 .dropdown .pointer-inner {
-	border-color: #FFF transparent;
+	border-color: #368907 transparent;
+
 }
 
 .dropdown-extended .pointer-inner {
 	border-color: #e7fec2 transparent;
+
 }
 
 .dropdown .dropdown-contents {
-	background: #fff;
+	background-color: #e7fec2; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #e7fec2 0%, #CADCEB 100%);
+	background-image: linear-gradient(to bottom, #e7fec2 0%,#CADCEB 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7fec2', endColorstr='#CADCEB',GradientType=0 ); /* IE6-9 */
 	border-color: #B9B9B9;
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
 }
