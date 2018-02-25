@@ -37,7 +37,7 @@
 		
 		{% EVENT ucp_pm_viewmessage_rank_before %}		
 
-		{% if RANK_TITLE or RANK_IMG %}<dd class="profile-rank">{{ RANK_TITLE }}{% if RANK_TITLE and RANK_IMG %}<br />{% endif %}{{ RANK_IMG }}</dd>{% endif %}
+		{% if RANK_TITLE or RANK_IMG %}<dd class="profile-rank">{{ RANK_TITLE }}{% if RANK_TITLE and RANK_IMG %}<br>{% endif %}{{ RANK_IMG }}</dd>{% endif %}
 		
 		{% EVENT ucp_pm_viewmessage_rank_after %}		
 
@@ -125,9 +125,9 @@
 
 		<p class="author">
 			<strong>{{ lang('SENT_AT') }}{{ lang('COLON') }}</strong> {{ SENT_DATE }}
-			<br /><strong>{{ lang('PM_FROM') }}{{ lang('COLON') }}</strong> {{ MESSAGE_AUTHOR_FULL }}
-			{% if S_TO_RECIPIENT %}<br /><strong>{{ lang('TO') }}{{ lang('COLON') }}</strong> {% for to_recipient in loops.to_recipient %}{% if to_recipient.NAME_FULL %}{{ to_recipient.NAME_FULL }}{% else %}<a href="{{ to_recipient.U_VIEW }}" style="color:{% if to_recipient.COLOUR %}{{ to_recipient.COLOUR }}{% elseif to_recipient.IS_GROUP %}#0000FF{% endif %};">{{ to_recipient.NAME }}</a>{% endif %}&nbsp;{% endfor %}{% endif %}
-			{% if S_BCC_RECIPIENT %}<br /><strong>{{ lang('BCC') }}{{ lang('COLON') }}</strong> {% for bcc_recipient in loops.bcc_recipient %}{% if bcc_recipient.NAME_FULL %}{{ bcc_recipient.NAME_FULL }}{% else %}<a href="{{ bcc_recipient.U_VIEW }}" style="color:{% if bcc_recipient.COLOUR %}{{ bcc_recipient.COLOUR }}{% elseif bcc_recipient.IS_GROUP %}#0000FF{% endif %};">{{ bcc_recipient.NAME }}</a>{% endif %}&nbsp;{% endfor %}{% endif %}
+			<br><strong>{{ lang('PM_FROM') }}{{ lang('COLON') }}</strong> {{ MESSAGE_AUTHOR_FULL }}
+			{% if S_TO_RECIPIENT %}<br><strong>{{ lang('TO') }}{{ lang('COLON') }}</strong> {% for to_recipient in loops.to_recipient %}{% if to_recipient.NAME_FULL %}{{ to_recipient.NAME_FULL }}{% else %}<a href="{{ to_recipient.U_VIEW }}" style="color:{% if to_recipient.COLOUR %}{{ to_recipient.COLOUR }}{% elseif to_recipient.IS_GROUP %}#0000FF{% endif %};">{{ to_recipient.NAME }}</a>{% endif %}&nbsp;{% endfor %}{% endif %}
+			{% if S_BCC_RECIPIENT %}<br><strong>{{ lang('BCC') }}{{ lang('COLON') }}</strong> {% for bcc_recipient in loops.bcc_recipient %}{% if bcc_recipient.NAME_FULL %}{{ bcc_recipient.NAME_FULL }}{% else %}<a href="{{ bcc_recipient.U_VIEW }}" style="color:{% if bcc_recipient.COLOUR %}{{ bcc_recipient.COLOUR }}{% elseif bcc_recipient.IS_GROUP %}#0000FF{% endif %};">{{ bcc_recipient.NAME }}</a>{% endif %}&nbsp;{% endfor %}{% endif %}
 		</p>
 
 
@@ -150,7 +150,7 @@
 
 		{% if EDITED_MESSAGE or EDIT_REASON %}
 		<div class="notice">{{ EDITED_MESSAGE }}
-			{% if EDIT_REASON %}<br /><strong>{{ lang('REASON') }}{{ lang('COLON') }}</strong> <em>{{ EDIT_REASON }}</em>{% endif %}
+			{% if EDIT_REASON %}<br><strong>{{ lang('REASON') }}{{ lang('COLON') }}</strong> <em>{{ EDIT_REASON }}</em>{% endif %}
 		</div>
 		{% endif %}
 
@@ -174,7 +174,7 @@
 {% if S_VIEW_MESSAGE %}
 <fieldset class="display-options">
 
-	{% if S_MARK_OPTIONS %}<label for="mark_option"><select name="mark_option" id="mark_option">{{ S_MARK_OPTIONS }}</select></label>&nbsp;<input class="button2" type="submit" name="submit_mark" value="{{ lang('GO') }}" />{% endif %}
+	{% if S_MARK_OPTIONS %}<label for="mark_option"><select name="mark_option" id="mark_option">{{ S_MARK_OPTIONS }}</select></label>&nbsp;<input class="button2" type="submit" name="submit_mark" value="{{ lang('GO') }}">{% endif %}
 	{% if U_PREVIOUS_PM %}
 		<a href="{{ U_PREVIOUS_PM }}" class="left-box arrow-{{ S_CONTENT_FLOW_BEGIN }}">
 			<i class="icon fa-angle-{{ S_CONTENT_FLOW_BEGIN }} fa-fw icon-black" aria-hidden="true"></i><span>{{ lang('VIEW_PREVIOUS_PM') }}</span>
@@ -185,10 +185,10 @@
 			<i class="icon fa-angle-{{ S_CONTENT_FLOW_END }} fa-fw icon-black" aria-hidden="true"></i><span>{{ lang('VIEW_NEXT_PM') }}</span>
 		</a>
 	{% endif %}	
-	{% if not S_UNREAD and not S_SPECIAL_FOLDER %}<label for="dest_folder">{% if S_VIEW_MESSAGE %}{{ lang('MOVE_TO_FOLDER') }}{{ lang('COLON') }} {% else %}{{ lang('MOVE_MARKED_TO_FOLDER') }}{% endif %} <select name="dest_folder" id="dest_folder">{{ S_TO_FOLDER_OPTIONS }}</select></label> <input class="button2" type="submit" name="move_pm" value="{{ lang('GO') }}" />{% endif %}
-	<input type="hidden" name="marked_msg_id[]" value="{{ MSG_ID }}" />
-	<input type="hidden" name="cur_folder_id" value="{{ CUR_FOLDER_ID }}" />
-	<input type="hidden" name="p" value="{{ MSG_ID }}" />
+	{% if not S_UNREAD and not S_SPECIAL_FOLDER %}<label for="dest_folder">{% if S_VIEW_MESSAGE %}{{ lang('MOVE_TO_FOLDER') }}{{ lang('COLON') }} {% else %}{{ lang('MOVE_MARKED_TO_FOLDER') }}{% endif %} <select name="dest_folder" id="dest_folder">{{ S_TO_FOLDER_OPTIONS }}</select></label> <input class="button2" type="submit" name="move_pm" value="{{ lang('GO') }}">{% endif %}
+	<input type="hidden" name="marked_msg_id[]" value="{{ MSG_ID }}">
+	<input type="hidden" name="cur_folder_id" value="{{ CUR_FOLDER_ID }}">
+	<input type="hidden" name="p" value="{{ MSG_ID }}">
 </fieldset>
 {% endif %}
 

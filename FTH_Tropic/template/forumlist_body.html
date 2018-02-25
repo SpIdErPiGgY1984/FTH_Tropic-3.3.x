@@ -48,13 +48,13 @@
 							{% EVENT forumlist_body_forum_image_after %}
 						{% endif %}
 						<a href="{{ forumrow.U_VIEWFORUM }}" class="forumtitle">{{ forumrow.FORUM_NAME }}</a>
-						{% if forumrow.FORUM_DESC %}<br />{{ forumrow.FORUM_DESC }}{% endif %}
+						{% if forumrow.FORUM_DESC %}<br>{{ forumrow.FORUM_DESC }}{% endif %}
 						{% if forumrow.MODERATORS %}
-							<br /><strong>{{ forumrow.L_MODERATOR_STR }}{{ lang('COLON') }}</strong> {{ forumrow.MODERATORS }}
+							<br><strong>{{ forumrow.L_MODERATOR_STR }}{{ lang('COLON') }}</strong> {{ forumrow.MODERATORS }}
 						{% endif %}
 						{% if forumrow.subforum|length and forumrow.S_LIST_SUBFORUMS %}
 							{% EVENT forumlist_body_subforums_before %}
-							<br /><strong>{{ forumrow.L_SUBFORUM_STR }}{{ lang('COLON') }}</strong>
+							<br><strong>{{ forumrow.L_SUBFORUM_STR }}{{ lang('COLON') }}</strong>
 							{% for subforum in forumrow.subforum %}
 								{% EVENT forumlist_body_subforum_link_prepend %}<a href="{{ subforum.U_SUBFORUM }}" class="subforum{% if subforum.S_UNREAD %} unread{% else %} read{% endif %}" title="{% if subforum.S_UNREAD %}{{ lang('UNREAD_POSTS') }}{% else %}{{ lang('NO_UNREAD_POSTS') }}{% endif %}">
 									<i class="icon {% if subforum.IS_LINK %}fa-external-link{% else %}fa-file-o{% endif %} fa-fw {% if subforum.S_UNREAD %} icon-red{% else %} icon-blue{% endif %} icon-md" aria-hidden="true"></i>{{ subforum.SUBFORUM_NAME }}</a>{% if not subforum.S_LAST_ROW %}{{ lang('COMMA_SEPARATOR') }}{% endif %}{% EVENT forumlist_body_subforum_link_append %}
@@ -93,7 +93,7 @@
 								<dfn>{{ lang('LAST_POST') }}</dfn>
 								{% if forumrow.S_DISPLAY_SUBJECT %}
 									{% EVENT forumlist_body_last_post_title_prepend %}
-									<a href="{{ forumrow.U_LAST_POST }}" title="{{ forumrow.LAST_POST_SUBJECT }}" class="lastsubject">{{ forumrow.LAST_POST_SUBJECT_TRUNCATED }}</a> <br />
+									<a href="{{ forumrow.U_LAST_POST }}" title="{{ forumrow.LAST_POST_SUBJECT }}" class="lastsubject">{{ forumrow.LAST_POST_SUBJECT_TRUNCATED }}</a> <br>
 								{% endif %}
 									{{ lang('POST_BY_AUTHOR') }} {{ forumrow.LAST_POSTER_FULL }}
 								{% if not S_IS_BOT %}
@@ -101,9 +101,9 @@
 										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">{{ lang('VIEW_LATEST_POST') }}</span>
 									</a>
 								{% endif %}
-								<br />{{ forumrow.LAST_POST_TIME }}
+								<br>{{ forumrow.LAST_POST_TIME }}
 							{% else %}
-								{{ lang('NO_POSTS') }}<br />&nbsp;
+								{{ lang('NO_POSTS') }}<br>&nbsp;
 							{% endif %}
 						</span>
 					</dd>

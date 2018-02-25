@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html dir="{{ S_CONTENT_DIRECTION }}" lang="{{ S_USER_LANG }}">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 {{ META }}
 <title>{% if UNREAD_NOTIFICATIONS_COUNT %}({{ UNREAD_NOTIFICATIONS_COUNT }}) {% endif %}{% if not S_VIEWTOPIC and not S_VIEWFORUM %}{{ SITENAME }} - {% endif %}{% if S_IN_MCP %}{{ lang('MCP') }} - {% elseif S_IN_UCP %}{{ lang('UCP') }} - {% endif %}{{ PAGE_TITLE }}{% if S_VIEWTOPIC or S_VIEWFORUM %} - {{ SITENAME }}{% endif %}</title>
 
@@ -104,7 +104,7 @@
 			<div id="search-box" class="search-box search-header" role="search">
 				<form action="{{ U_SEARCH }}" method="get" id="search">
 				<fieldset>
-					<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}" />
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}">
 					<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
 						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
 					</button>

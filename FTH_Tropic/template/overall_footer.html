@@ -9,12 +9,12 @@
 	<div class="copyright">
 		{% EVENT overall_footer_copyright_prepend %}
 		{{ CREDIT_LINE }}
-	<br /><a href="http://www.graphogames.fr" title="Graphogames" onclick="window.open(this.href); return false">FTH_Tropic</a> by FranckTH <a href="https://www.froddelpower.be" title="Froddelpower" onclick="window.open(this.href); return false">& Solidjeuh</a>
-	{% if TRANSLATION_INFO %}<br />{{ TRANSLATION_INFO }}{% endif %}
+	<br><a href="http://www.graphogames.fr" title="Graphogames" onclick="window.open(this.href); return false">FTH_Tropic</a> by FranckTH <a href="https://www.froddelpower.be" title="Froddelpower" onclick="window.open(this.href); return false">& Solidjeuh</a>
+	{% if TRANSLATION_INFO %}<br>{{ TRANSLATION_INFO }}{% endif %}
 	{% EVENT overall_footer_copyright_append %}
-	{% if DEBUG_OUTPUT %}<br />{{ DEBUG_OUTPUT }}{% endif %}
-	{% if U_ACP %}<br /><strong><a href="{{ U_ACP }}">{{ lang('ACP') }}</a></strong>{% endif %}
-	<br /><div id="gototop2"><a href="#logo" class="gototop" title="{{ lang('BACK_TO_TOP') }}"></a></div>	
+	{% if DEBUG_OUTPUT %}<br>{{ DEBUG_OUTPUT }}{% endif %}
+	{% if U_ACP %}<br><strong><a href="{{ U_ACP }}">{{ lang('ACP') }}</a></strong>{% endif %}
+	<br><div id="gototop2"><a href="#logo" class="gototop" title="{{ lang('BACK_TO_TOP') }}"></a></div>	
 	<div class="logofth"></div>
 	<div style="clear: both"></div>
 	</div>
@@ -52,14 +52,14 @@
 	{% if not S_IS_BOT %}{{ RUN_CRON_TASK }}{% endif %}
 </div>
 
-<script type="text/javascript" src="{{ T_JQUERY_LINK }}"></script>
-{% if S_ALLOW_CDN %}<script type="text/javascript">window.jQuery || document.write('\x3Cscript src="{{ T_ASSETS_PATH }}/javascript/jquery.min.js?assets_version={{ T_ASSETS_VERSION }}">\x3C/script>');</script>{% endif %}
-<script type="text/javascript" src="{{ T_ASSETS_PATH }}/javascript/core.js?assets_version={{ T_ASSETS_VERSION }}"></script>
+<script src="{{ T_JQUERY_LINK }}"></script>
+{% if S_ALLOW_CDN %}<script>window.jQuery || document.write('\x3Cscript src="{{ T_ASSETS_PATH }}/javascript/jquery.min.js?assets_version={{ T_ASSETS_VERSION }}">\x3C/script>');</script>{% endif %}
+<script src="{{ T_ASSETS_PATH }}/javascript/core.js?assets_version={{ T_ASSETS_VERSION }}"></script>
 {% INCLUDEJS 'forum_fn.js' %}
 {% INCLUDEJS 'ajax.js' %}
 
 {% if S_ALLOW_CDN %}
-	<script type="text/javascript">
+	<script>
 		(function($){
 			var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
 				$span = $('<span class="fa" style="display:none"></span>').appendTo('body');
