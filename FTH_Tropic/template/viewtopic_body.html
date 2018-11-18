@@ -333,6 +333,8 @@
 			<div class="content-wrapper">
 			<div class="content postcontent"><div class="post-bubble"></div>{{ postrow.MESSAGE }}</div>
 			</div>
+			
+			{% EVENT viewtopic_body_postrow_content_after %}
 
 			{% if postrow.S_HAS_ATTACHMENTS %}
 				<dl class="attachbox">
