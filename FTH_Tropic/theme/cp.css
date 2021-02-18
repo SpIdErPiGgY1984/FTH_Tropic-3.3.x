@@ -301,10 +301,10 @@ ol.def-rules li {
 }
 
 /* DEPRECATED 3.2.6
- .pmlist li.pm_message_reported_colour, .pm_message_reported_colour {
- 	border-left-color: transparent;
- 	border-right-color: transparent;
- }
+.pmlist li.pm_message_reported_colour, .pm_message_reported_colour {
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
 */
 
 .pmlist li.pm_message_reported_colour, .pm_message_reported_colour,
