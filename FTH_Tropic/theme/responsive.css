@@ -348,7 +348,7 @@
 	}
 
 	textarea, dd textarea, .message-box textarea {
- 		width: auto;
+ 		max-width: auto;
  		border-width: 0 0 1px 0;
  		padding-bottom: 5px;
 		margin: 0 0 5px 0;
@@ -479,8 +479,9 @@
 	}
 
 	.postprofile .has-avatar .avatar-container {
-		margin: 0;
+		margin: 5px;
 		overflow: inherit;
+		float: left;
 	}
 
 	.postprofile .avatar-container:after {
