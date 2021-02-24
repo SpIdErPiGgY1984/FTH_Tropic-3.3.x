@@ -1237,24 +1237,9 @@ div.legend ul li {
 	clear: both;
 }
 
-.content-wrapper {
-	padding-right: 11px;
-	position: relative;
-}
-
 .postcontent {
 	padding: 10px;
 	border: 2px solid #498828;
 	border-radius: 10px;
 	background-color: #fff;
-}
-
-.post-bubble {
-	position: absolute;
-	width: 11px;
-	height: 13px;
-	margin-right: 2px;
-	top: 20px;
-	right: 0;
-	background-image: url("./images/post-bubble.png");
 }
