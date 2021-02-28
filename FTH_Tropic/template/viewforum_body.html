@@ -54,7 +54,7 @@
 		<div class="search-box" role="search">
 			<form method="get" id="forum-search" action="{{ S_SEARCHBOX_ACTION }}">
 			<fieldset>
-				<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="{{ lang('SEARCH_FORUM') }}">
+				<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="{{ lang('SEARCH_FORUM') }}" />
 				<button class="button button-search" type="submit" title="{{ lang('SEARCH') }}">
 					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{{ lang('SEARCH') }}</span>
 				</button>
@@ -232,7 +232,7 @@
 								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">{{ VIEW_LATEST_POST }}</span>
 							</a>
 						{% endif %}
-						<br>{{ topicrow.LAST_POST_TIME }}
+						<br><time datetime="{{ topicrow.LAST_POST_TIME_RFC3339 }}">{{ topicrow.LAST_POST_TIME }}</time>
 					</span>
 				</dd>
 			</dl>
@@ -307,7 +307,7 @@
 	</div>
 {% endif %}
 
-{% if S_DISPLAY_POST_INFO %}
+{% if S_IS_POSTABLE and rules|length %}
 	<div class="stat-block permissions">
 		<h3>{{ lang('FORUM_PERMISSIONS') }}</h3>
 		<p>{% for rules in loops.rules %}{{ rules.RULE }}<br>{% endfor %}</p>
