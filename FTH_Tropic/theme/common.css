@@ -673,15 +673,15 @@ table.table1 tbody th {
 /* Specific column styles */
 table.table1 .name		{ text-align: left; }
 table.table1 .center		{ text-align: center; }
-table.table1 .reportby	{ width: 15%; }
+table.table1 .reportby		{ width: 15%; }
 table.table1 .posts		{ text-align: center; width: 7%; }
-table.table1 .joined	{ text-align: left; width: 15%; }
-table.table1 .active	{ text-align: left; width: 15%; }
+table.table1 .joined		{ text-align: left; width: 15%; }
+table.table1 .active		{ text-align: left; width: 15%; }
 table.table1 .mark		{ text-align: center; width: 7%; }
 table.table1 .info		{ text-align: left; width: 30%; }
-table.table1 .info div	{ width: 100%; white-space: normal; overflow: hidden; }
-table.table1 .autocol	{ line-height: 2em; white-space: nowrap; }
-table.table1 thead .autocol { padding-left: 1em; }
+table.table1 .info div		{ width: 100%; white-space: normal; overflow: hidden; }
+table.table1 .autocol		{ line-height: 2em; white-space: nowrap; }
+table.table1 thead .autocol	{ padding-left: 1em; }
 
 table.table1 span.rank-img {
 	float: right;
@@ -747,7 +747,6 @@ table.info tbody th {
 }
 
 dl.details {
-	/*font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;*/
 	font-size: 1.1em;
 }
 
@@ -785,7 +784,7 @@ fieldset.fields1 dd.recipients {
 	margin-left: 1em;
 }
 
-fieldset.fields1 ul.recipients  input.button2{
+fieldset.fields1 ul.recipients  input.button2 {
 	font-size: 0.8em;
 	margin-right: 0;
 	padding: 0;
@@ -1279,7 +1278,7 @@ ul.linklist:after,
 	width: 50px;
 }
 
-.dropdown .clone.hidden  {
+.dropdown .clone.hidden {
 	display: none;
 }
 
@@ -1289,34 +1288,6 @@ ul.linklist:after,
 
 .dropdown .clone.hidden + li {
 	border-top: none;
-}
-
-/* Goto Top */
-#gototop2 {
-	padding: 5px;
-	width: 30px;
-	height: 30px;
-	margin: 0 auto !important;
-}
-
-a.gototop {
-	background-image: url("./images/gotop.png");
-	background-position: 0% 0%;
-	background-repeat: no-repeat;
-	margin: 0 0 !important;
-	width: 30px;
-	height: 30px;
-	border: none;
-	outline: none;
-	display: block;
-	overflow: hidden;
-}
-
-a.gototop:hover {
-	background-image: url("./images/gotop.png");
-	background-position: 0 -30px;
-	border: none;
-	outline: none;
 }
 
 .count {
