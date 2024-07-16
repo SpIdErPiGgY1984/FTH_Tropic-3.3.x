@@ -9,7 +9,7 @@
 	<div class="copyright">
 		{% EVENT overall_footer_copyright_prepend %}
 		<p class="footer-row">
-			<span class="footer-copyright">{{ CREDIT_LINE }}<br>FTH_Tropic by <a href="http://www.graphogames.fr" title="Graphogames" onclick="window.open(this.href); return false">FranckTH</a> <a href="https://www.myarea51secrets.be" title="SpIdErPiGgY" onclick="window.open(this.href); return false">& SpIdErPiGgY</a></span>
+			<span class="footer-copyright">{{ CREDIT_LINE }}<br>FTH_Tropic by <a href="http://www.graphogames.fr" title="Graphogames" onclick="window.open(this.href); return false">FranckTH</a> <a href="https://www.myarea51secrets.com/" title="SpIdErPiGgY" onclick="window.open(this.href); return false">& SpIdErPiGgY</a></span>
 		</p>
 		{% if TRANSLATION_INFO %}
 		<p class="footer-row">
@@ -74,7 +74,7 @@
 </div>
 
 <script src="{{ T_JQUERY_LINK }}"></script>
-{% if S_ALLOW_CDN %}<script>window.jQuery || document.write('\x3Cscript src="{{ T_ASSETS_PATH }}/javascript/jquery-3.6.0.min.js?assets_version={{ T_ASSETS_VERSION }}">\x3C/script>');</script>{% endif %}
+{% if S_ALLOW_CDN %}<script>window.jQuery || document.write('\x3Cscript src="{{ T_ASSETS_PATH }}/javascript/jquery-3.7.1.min.js?assets_version={{ T_ASSETS_VERSION }}">\x3C/script>');</script>{% endif %}
 <script src="{{ T_ASSETS_PATH }}/javascript/core.js?assets_version={{ T_ASSETS_VERSION }}"></script>
 {% INCLUDEJS 'forum_fn.js' %}
 {% INCLUDEJS 'ajax.js' %}
